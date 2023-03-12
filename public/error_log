@@ -1,0 +1,4 @@
+[10-Nov-2022 08:38:58 UTC] PHP Warning:  symlink(): No such file or directory in /home/ausaaken/apekinc.top/public/symlink.php on line 2
+[10-Nov-2022 08:43:27 UTC] PHP Warning:  symlink(): No such file or directory in /home/ausaaken/apekinc.top/public/symlink.php on line 2
+[10-Nov-2022 08:45:55 UTC] PHP Warning:  symlink(): File exists in /home/ausaaken/apekinc.top/public/symlink.php on line 2
+[09-Jan-2023 20:48:33 Africa/Nairobi] PHP Fatal error:  Cannot redeclare App\Http\Controllers\dataController::editPost() in /home/ausaaken/apekinc.top/app/Http/Controllers/dataController.php on line 80
