@@ -1,6 +1,9 @@
 <?php
+
 use App\Http\Controllers\userController;
 use App\Http\Controllers\dataController;
+use App\Http\Controllers\viewsController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
@@ -15,7 +18,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('index');
 });
 Route::get('/register', function () {
@@ -34,27 +37,25 @@ Route::get('/logout', function () {
 Route::get('/music', function () {
     return view('createmusic');
 });
-
-Route::post('/reg_user', [userController::class,'register']);
-Route::post('/log_user', [userController::class,'log_user']);
-
-Route::post('/post',[dataController::class, 'createPost']);
-Route::post('/createmusic',[dataController::class, 'createmusic']);
-Route::post('/songs',[dataController::class, 'songs']);
-Route::get('/blog', [dataController::class, 'blog']);
-Route::get('/blog/{title}', [dataController::class, 'post']);
-Route::get('/song/{title}', [dataController::class, 'song']);
-Route::get('/dashboard', [dataController::class, 'dashboard'])->middleware('sessionCheck');
-Route::get('/publish/{id}', [dataController::class, 'publish']);
-Route::get('/unpublish/{id}', [dataController::class, 'unpublish']);
+Route::post('/songs', [dataController::class, 'songs']);
+Route::get('/blog', [viewsController::class, 'blog']);
+Route::get('/blog/{title}', [viewsController::class, 'post']);
+Route::get('/song/{title}', [viewsController::class, 'song']);
 Route::get('/like/{id}', [dataController::class, 'like']);
 Route::post('/comment/{id}', [dataController::class, 'comment']);
 Route::post('/mcomment/{id}', [dataController::class, 'mcomment']);
-Route::get('/deleteComment/{id}', [dataController::class, 'deleteComment']);
-Route::get('/editpost/{title}', [dataController::class, 'editpost']);
-Route::post('/postedit/{id}', [dataController::class, 'postedit']);
-Route::get('/deletePost/{id}', [dataController::class, 'deletePost']);
-Route::get('/view/{title}', [dataController::class, 'viewPost'])->middleware('sessionCheck');
-Route::post('/savediary', [dataController::class, 'savediary'])->middleware('sessionCheck');
-Route::get('/diary', [dataController::class, 'diary'])->middleware('sessionCheck');
-Route::post('/sendsms',[dataController::class,'sendsms']);
+Route::middleware('sessionCheck')->group(function () {
+    Route::get('/deleteComment/{id}', [dataController::class, 'deleteComment']);
+    Route::get('/editpost/{title}', [dataController::class, 'editpost']);
+    Route::post('/postedit/{id}', [dataController::class, 'postedit']);
+    Route::get('/deletePost/{id}', [dataController::class, 'deletePost']);
+    Route::get('/view/{title}', [dataController::class, 'viewPost']);
+    Route::post('/savediary', [dataController::class, 'savediary']);
+    Route::get('/diary', [viewsController::class, 'diary']);
+    Route::post('/post', [dataController::class, 'createPost']);
+    Route::post('/createmusic', [dataController::class, 'createmusic']);
+    Route::get('/dashboard', [viewsController::class, 'dashboard']);
+    Route::get('/togglepublish/{id}', [dataController::class, 'publish']);
+    Route::post('/sendsms', [dataController::class, 'sendsms']);
+});
+Auth::routes();

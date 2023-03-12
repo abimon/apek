@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.base' ['title'=>'Create Post'])
 @section('dashboard')
     <div class="m-2" style='min-height:500px;'>
         <form action="/post" method="post"class="row" enctype="multipart/form-data" novalidate class="needs-validation">
@@ -13,9 +13,12 @@
                     <label for="">Title</label>
                     <div class="invalid-feedback">This field is required.</div>
                 </div>
-                <div class="form-floating mb-2">
-                    <input type="text" name="category" placeholder=' 'class="form-control" required>
-                    <label for="">Category</label>
+                <div class="form-select mb-2">
+                    <select name="category" id="">
+                        <option value="" selected disabled>Select Category</option>
+                        <option value="poem">Poem</option>
+                        <option value="blog">Blog</option>
+                    </select>
                     <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <div class="form-floating mb-2">
@@ -23,7 +26,7 @@
                     <label for="">Excerpt</label>
                     <div class="invalid-feedback">This field is required.</div>
                 </div>
-                @if(Session::get('user')['is_admin']==true)
+                @if(Auth()->user()->role=='Admin')
                 <div class="form-check mb-2">
                     <input class="form-check-input" type="checkbox" value="1" name="published">
                     <label class="form-check-label" for="">

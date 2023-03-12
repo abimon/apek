@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link href="{{asset('storage/static/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <link href="{{asset('storage/static/assets/css/style.css')}}" rel="stylesheet">
 </head>
+
 <body>
     <header id="header" class="d-flex align-items-center fixed-top">
         <div class="container d-flex justify-content-between">
@@ -22,7 +24,7 @@
                 <h1><a href="/"><span>APEK </span>INC.</a></h1>
             </div>
 
-            <nav  id="navbar" class="navbar" >
+            <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto" href="/#">Home</a></li>
                     <li><a class="nav-link scrollto" href="/#about">About</a></li>
@@ -34,26 +36,29 @@
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-            
+
         </div>
     </header>
-    <div class="bg-transparent" style="height:80px;"></div>
+    <?php $bgimg = asset('storage/static/img/bgimg.jpg'); ?>
+    <div style="height:80px;"></div>
+    <div style="min-height:400px;">
         @yield('content')
-    <footer>       
+    </div>
+    <footer>
         <div class="footer-area-bottom">
             <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="copyright text-center">
-                    <p>
-                    &copy;2020-{{date('Y')}} Copyright <strong>APEK Inc.</strong>. All Rights Reserved
-                    </p>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="copyright text-center">
+                            <p>
+                                &copy;2020-{{date('Y')}} Copyright <strong>APEK Inc.</strong>. All Rights Reserved
+                            </p>
+                        </div>
+                        <div class="credits">
+                            Designed by <a href="https://apekinc.com/">APEK Inc.</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="credits">
-                    Designed by <a href="https://apekinc.com/">APEK Inc.</a>
-                </div>
-                </div>
-            </div>
             </div>
         </div>
     </footer><!-- End  Footer -->
@@ -72,8 +77,9 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
     <script>
         ClassicEditor
-           .create( document.querySelector( '#ckeditor' ) )
+            .create(document.querySelector('#ckeditor'))
     </script>
     <script async src="https://static.addtoany.com/menu/page.js"></script>
 </body>
+
 </html>

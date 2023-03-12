@@ -1,7 +1,6 @@
-@extends('base')
+@extends('layouts.base', ['title'=>'Edit Post'])
 @section('dashboard')
     <div class="m-2" style='min-height:500px;'>
-        @foreach($post as $post)
         <form action="/postedit/{{$post->id}}" method="post"class="row" enctype="multipart/form-data" novalidate class="needs-validation">
             @csrf
             <div class="col-md-8 p-2"  style="min-height:400px;">
@@ -15,18 +14,8 @@
                     <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="text" name="category" value="{{$post->category}}" class="form-control" required>
-                    <label for="">Category</label>
-                    <div class="invalid-feedback">This field is required.</div>
-                </div>
-                <div class="form-floating mb-2">
                     <textarea type="text" name="excerpt" value="{{$post->except}}" class="form-control" cols=30 row=10 required></textarea>
-                    <label for="">Excerpt</label>
-                    <div class="invalid-feedback">This field is required.</div>
-                </div>
-                <div class="form-floating mb-2">
-                    <input type="file" name="img" placeholder=' 'class="form-control" required>
-                    <label for="">Featured Image</label>
+                    <label for="">Excerpt(Optional for poems)</label>
                     <div class="invalid-feedback">This field is required.</div>
                 </div>
                 @if(Session::get('user')['is_admin']==true)
@@ -43,7 +32,6 @@
                 </div>
             </div>
         </form>
-        @endforeach
     </div>
     
     <script src="{{asset('storage/static/js/form.js')}}"></script>
