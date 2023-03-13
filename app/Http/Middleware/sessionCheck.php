@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 
 class sessionCheck
 {
@@ -17,7 +16,7 @@ class sessionCheck
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->session()->has('user')&&Session::get('user')['is_admin']==true){
+        if(Auth()->user()&&Auth()->user()->role != 'Guest'){
             return $next($request);
         }
         return redirect('/login');
