@@ -21,21 +21,11 @@ use Illuminate\Support\Facades\Session;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/register', function () {
-    return view('register');
-});
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/create', function () {
-    return view('createpost');
-});
+
+
 Route::get('/logout', function () {
-    Session::forget('user');
-    return view('login');
-});
-Route::get('/music', function () {
-    return view('createmusic');
+    Auth::logout();
+    return redirect('/login');
 });
 Route::post('/songs', [dataController::class, 'songs']);
 Route::get('/blog', [viewsController::class, 'blog']);
@@ -45,6 +35,12 @@ Route::get('/like/{id}', [dataController::class, 'like']);
 Route::post('/comment/{id}', [dataController::class, 'comment']);
 Route::post('/mcomment/{id}', [dataController::class, 'mcomment']);
 Route::middleware('sessionCheck')->group(function () {
+    Route::get('/create', function () {
+        return view('createpost');
+    });
+    Route::get('/music', function () {
+        return view('createmusic');
+    });
     Route::get('/deleteComment/{id}', [dataController::class, 'deleteComment']);
     Route::get('/editpost/{title}', [dataController::class, 'editpost']);
     Route::post('/postedit/{id}', [dataController::class, 'postedit']);
