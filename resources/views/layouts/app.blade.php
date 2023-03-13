@@ -77,7 +77,7 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
     <script>
         CKEDITOR.ClassicEditor
-        .create(document.querySelector('#ckeditor'), {
+        .create(document.getElementById("ckeditor"), {
             toolbar: {
                 items: [
                     'exportPDF', 'exportWord', '|',
