@@ -53,18 +53,7 @@ class dataController extends Controller
         return redirect('/blog/#songs4thesoul');
     }
     
-    function post($title)
-    {
-        $post = post::where(['title' => $title])->get();
-        $posts = post::where(['posted' => 1])->select('title')->orderBy('id', 'desc')->get();
-        $comments = comment::all();
-        $users = User::all();
-        $likes = like::all();
-        return view('post', [
-            'posts' => $posts, 'post' => $post,
-            'comments' => $comments, 'users' => $users, 'likes' => $likes
-        ]);
-    }
+    
     
     function editpost($title)
     {

@@ -51,7 +51,22 @@ class viewsController extends Controller
         ];
         return view('dashboard', $data);
     }
-
+    function post($title)
+    {
+        $post = post::where(['title' => $title])->get();
+        $posts = post::where(['posted' => 1])->select('title')->orderBy('id', 'desc')->get();
+        $comments = comment::all();
+        $users = User::all();
+        $likes = like::all();
+        $data = [
+            'posts' => $posts, 
+            'post' => $post,
+            'comments' => $comments, 
+            'users' => $users, 
+            'likes' => $likes
+        ];
+        return view('post', $data);
+    }
     function viewPost($title)
     {
         $post = post::where(['title' => $title])->first();
