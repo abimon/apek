@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <div class="bg-transparent" style="height:80px;"></div>
 <header class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">{{Session::get('user')['name']}}</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">{{Auth()->user()->name}}</a>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
       <a class="nav-link px-3 text-danger" href="/logout">Sign out</a>
