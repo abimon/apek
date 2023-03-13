@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>{{$post->title}}])
+@extends('layouts.app',['title'=>'{{$post->title}}'])
 @section('content')
 <div class="row">
     <div>
