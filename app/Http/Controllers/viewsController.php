@@ -65,7 +65,8 @@ class viewsController extends Controller
             'users' => $users, 
             'likes' => $likes
         ];
-        return view('post', $data);
+        return $data;
+        //return view('post', $data);
     }
     function viewPost($title)
     {
