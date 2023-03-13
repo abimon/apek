@@ -53,11 +53,11 @@ class viewsController extends Controller
     }
     function post($title)
     {
-        $post = post::where(['title' => $title])->get();
+        $post = post::where(['title' => $title])->first();
         $posts = post::where(['posted' => 1])->select('title')->orderBy('id', 'desc')->get();
-        $comments = comment::all();
+        $comments = comment::where(['post_id'=>$post->id])->get();
         $users = User::all();
-        $likes = like::all();
+        $likes = like::where(['post_id'=>$post->id])->get();
         $data = [
             'posts' => $posts, 
             'post' => $post,
@@ -65,8 +65,8 @@ class viewsController extends Controller
             'users' => $users, 
             'likes' => $likes
         ];
-        return $data;
-        //return view('post', $data);
+        //return $data;
+        return view('post', $data);
     }
     function viewPost($title)
     {

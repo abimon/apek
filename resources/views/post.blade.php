@@ -24,12 +24,11 @@
                     <a class="a2a_button_twitter"></a>
                 </div>
                 <a href="/like/{{$post->id}}">
-                    <i class="fa-regular fa-heart fa-fw fa-2x  text-warning"></i>{{$likes->where('post_id',$post->id)->count()}}
+                    <i class="fa-regular fa-heart fa-fw fa-2x  text-warning"></i>{{$likes->count()}}
                 </a>
             </div>
             <div>
                 @foreach($comments as $comment)
-                @if(($comment->post_id)==($post->id))
                 <div class="text-dark me-5">
                     @foreach($users as $user)
                     @if(($user->id)==($comment->user_id))
@@ -38,7 +37,6 @@
                     @endif
                     @endforeach
                 </div>
-                @endif
                 @endforeach
             </div>
             <div class="mt-1">
