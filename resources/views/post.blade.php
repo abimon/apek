@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>$post->title])
+@extends('layouts.app',['title'=>$article->title])
 @section('content')
 <div class="row">
     <div>
@@ -12,9 +12,9 @@
     <div class="col-sm-9 mt-2">
         <div class="bg-transparent shadow p-2" style="min-height:550px ;">
 
-            <h3 class="text-center">{{$post->title}}</h3>
+            <h3 class="text-center">{{$article->title}}</h3>
             <div class='p-2 lh-sm'>
-                <?php echo html_entity_decode($post['body']); ?>
+                <?php echo html_entity_decode($article['body']); ?>
             </div>
             <div class="d-flex justify-content-between me-3">
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
@@ -23,7 +23,7 @@
                     <a class="a2a_button_facebook"></a>
                     <a class="a2a_button_twitter"></a>
                 </div>
-                <a href="/like/{{$post->id}}">
+                <a href="/like/{{$article->id}}">
                     <i class="fa-regular fa-heart fa-fw fa-2x  text-warning"></i>{{$likes->count()}}
                 </a>
             </div>
@@ -40,7 +40,7 @@
                 @endforeach
             </div>
             <div class="mt-1">
-                <form action="/comment/{{$post->id}}" method="post">
+                <form action="/comment/{{$article->id}}" method="post">
                     @csrf
                     <div class="input-group">
                         <input type='text' class="form-control" name="comment">
@@ -54,7 +54,7 @@
     <div class="col-sm-3 p-3">
         <h3 class='text-info text-center'>Other Posts</h3>
         <hr>
-        @foreach($posts as $post)
+        @foreach($posts->where('id','!=', $article->id) as $post)
         <a href="/blog/{{$post->title}}">
             <p>
                 <i style="text-decoration:none; text-transform:uppercase;" class="text-secondary">{{$post->title}}</i>

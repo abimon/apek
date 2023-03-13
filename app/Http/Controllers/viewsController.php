@@ -60,7 +60,7 @@ class viewsController extends Controller
         $likes = like::where(['post_id'=>$post->id])->get();
         $data = [
             'posts' => $posts, 
-            'post' => $post,
+            'article' => $post,
             'comments' => $comments, 
             'users' => $users, 
             'likes' => $likes
