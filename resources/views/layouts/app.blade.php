@@ -74,7 +74,7 @@
     <!-- Template Main JS File -->
     <script src="{{asset('storage/static/assets/js/main.js')}}"></script>
     <script src="{{asset('storage/static/js/form.js')}}"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/super-build/ckeditor.js"></script>
     <script>
         CKEDITOR.ClassicEditor
         .create(document.getElementById("ckeditor"), {
