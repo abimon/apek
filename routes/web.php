@@ -41,13 +41,13 @@ Route::middleware('sessionCheck')->group(function () {
     Route::get('/music', function () {
         return view('createmusic');
     });
-    Route::get('/deleteComment/{id}', [dataController::class, 'deleteComment']);
+    Route::get('/deleteComment/{id}', [dataController::class, 'deleteComment'])->middleware('checkAdmin');
     Route::get('/editpost/{title}', [dataController::class, 'editpost']);
     Route::post('/postedit/{id}', [dataController::class, 'postedit']);
     Route::get('/deletePost/{id}', [dataController::class, 'deletePost']);
     Route::get('/view/{title}', [dataController::class, 'viewPost']);
-    Route::post('/savediary', [dataController::class, 'savediary']);
-    Route::get('/diary', [viewsController::class, 'diary']);
+    Route::post('/savediary', [dataController::class, 'savediary'])->middleware('checkAdmin');
+    Route::get('/diary', [viewsController::class, 'diary'])->middleware('checkAdmin');
     Route::post('/post', [dataController::class, 'createPost']);
     Route::post('/createmusic', [dataController::class, 'createmusic']);
     Route::get('/dashboard', [viewsController::class, 'dashboard']);
