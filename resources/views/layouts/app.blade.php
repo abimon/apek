@@ -26,13 +26,13 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="/#">Home</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='/'?'active':''" href="/">Home</a></li>
                     <li><a class="nav-link scrollto" href="/#about">About</a></li>
                     <li><a class="nav-link scrollto" href="/#portfolio">Portfolio</a></li>
                     <li><a class="nav-link scrollto" href="/#price">Pricing</a></li>
                     <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-                    <li><a class="nav-link scrollto" href="/blog/#blog">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="/dashboard/#dashboard">Dashboard</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='blog'?'active':''" href="/blog">Blog</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='dashboard'?'active':''" href="/dashboard">Dashboard</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
