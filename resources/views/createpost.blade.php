@@ -14,10 +14,10 @@
                     <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <div class="form-select mb-2">
-                    <select name="category" id="">
-                        <option value="" selected disabled>Select Category</option>
-                        <option value="poem">Poem</option>
-                        <option value="blog">Blog</option>
+                    <select name="category" class="form-control" id="">
+                        <option value="" class="form-control" selected disabled>Select Category</option>
+                        <option value="poem" class="form-control">Poem</option>
+                        <option value="blog" class="form-control">Blog</option>
                     </select>
                     <div class="invalid-feedback">This field is required.</div>
                 </div>
