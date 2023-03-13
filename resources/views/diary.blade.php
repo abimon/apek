@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.base',['title'=>'Diary'])
 @section('dashboard')
     <div class="m-2" style='min-height:500px;'>
         <form action="/savediary" method="post"class="row" enctype="multipart/form-data" novalidate class="needs-validation">

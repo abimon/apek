@@ -1,4 +1,4 @@
-@extends('layouts.base' ['title'=>'Create Post'])
+@extends('layouts.base', ['title'=>'Create Post'])
 @section('dashboard')
     <div class="m-2" style='min-height:500px;'>
         <form action="/post" method="post"class="row" enctype="multipart/form-data" novalidate class="needs-validation">
