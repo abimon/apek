@@ -110,21 +110,12 @@
                                     <td>
                                         <span class="text-success">
                                             <div class="">
-                                                @if(($post->isPosted)==1)
-                                                <a href="togglePost/{{$post->id}}">
+                                                <a href="togglePost/{{$poem->id}}">
                                                     <label class="switch">
-                                                        <i type="button" class="checked"></i>
+                                                        <i type="button" class="{{($post->posted)==1?'checked':''}}"></i>
                                                         <span class="slider round"></span>
                                                     </label>
                                                 </a>
-                                                @else
-                                                <a href="togglePost/{{$post->id}}">
-                                                    <label class="switch">
-                                                        <i class=""></i>
-                                                        <span class="slider round"></span>
-                                                    </label>
-                                                </a>
-                                                @endif
                                             </div>
                                         </span>
                                     </td>
@@ -185,21 +176,12 @@
                                     <td>
                                         <span class="text-success">
                                             <div class="">
-                                                @if(($poem->isPosted)==1)
                                                 <a href="togglePost/{{$poem->id}}">
                                                     <label class="switch">
-                                                        <i type="button" class="checked"></i>
+                                                        <i type="button" class="{{($poem->posted)==1?'checked':''}}"></i>
                                                         <span class="slider round"></span>
                                                     </label>
                                                 </a>
-                                                @else
-                                                <a href="togglePost/{{$poem->id}}">
-                                                    <label class="switch">
-                                                        <i class=""></i>
-                                                        <span class="slider round"></span>
-                                                    </label>
-                                                </a>
-                                                @endif
                                             </div>
                                         </span>
                                     </td>
@@ -260,21 +242,12 @@
                                     <td>
                                         <span class="text-success">
                                             <div class="">
-                                                @if(($piece->isPosted)==1)
-                                                <a href="togglePost/{{$piece->id}}">
+                                                <a href="togglePost/{{$poem->id}}">
                                                     <label class="switch">
-                                                        <i type="button" class="checked"></i>
+                                                        <i type="button" class="{{($piece->posted)==1?'checked':''}}"></i>
                                                         <span class="slider round"></span>
                                                     </label>
                                                 </a>
-                                                @else
-                                                <a href="togglePost/{{$piece->id}}">
-                                                    <label class="switch">
-                                                        <i class=""></i>
-                                                        <span class="slider round"></span>
-                                                    </label>
-                                                </a>
-                                                @endif
                                             </div>
                                         </span>
                                     </td>
