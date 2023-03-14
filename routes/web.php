@@ -51,7 +51,7 @@ Route::middleware('sessionCheck')->group(function () {
     Route::post('/post', [dataController::class, 'createPost']);
     Route::post('/createmusic', [dataController::class, 'createmusic']);
     Route::get('/dashboard', [viewsController::class, 'dashboard']);
-    Route::get('/togglepublish/{id}', [dataController::class, 'publish']);
+    Route::get('/togglePost/{id}', [dataController::class, 'publish']);
     Route::post('/sendsms', [dataController::class, 'sendsms']);
 });
 Auth::routes();

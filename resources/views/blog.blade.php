@@ -14,7 +14,7 @@
                 @foreach($posts as $post)
                 <div class="row">
                     <div class="col-md-12 mt-1 p-4">
-                        <a href="/blog/{{$post->title}}">
+                        <a href="/speakinghearts/{{$post->title}}">
                             <div class="text-uppercase" style="font-size:105%">
                                 <strong>{{$post->title}}</strong>
                             </div>

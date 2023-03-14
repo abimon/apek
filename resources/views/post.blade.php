@@ -55,7 +55,7 @@
         <h3 class='text-info text-center'>Other Posts</h3>
         <hr>
         @foreach($posts->where('id','!=', $article->id) as $post)
-        <a href="/blog/{{$post->title}}">
+        <a href="/speakinghearts/{{$post->title}}">
             <p>
                 <i style="text-decoration:none; text-transform:uppercase;" class="text-secondary">{{$post->title}}</i>
             </p>

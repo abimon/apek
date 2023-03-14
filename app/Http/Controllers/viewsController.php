@@ -45,11 +45,21 @@ class viewsController extends Controller
     }
     function dashboard()
     {
-        $posts = post::paginate(10);
-        $users = User::select('name', 'email', 'id', 'passport')->get();
+        $poems = post::where(['category'=>'poem'])->paginate(10);
+        $posts = post::where(['category'=>'blog'])->paginate(10);
+        $users = User::select('name', 'email', 'id', 'passport')->paginate(10);
+        $comments = comment::select('post_id')->get();
+        $likes = comment::select('post_id')->get();
+        $music = music::select('title')->paginate(10);
+        $mcomments = mcomment::select('id', 'post_is')->get();
         $data = [
             'posts' => $posts,
-            'users'=>$users
+            'poems'=>$poems,
+            'music'=>$music,
+            'users'=>$users,
+            'likes'=>$likes,
+            'comments'=>$comments,
+            'mcomments'=>$mcomments,
         ];
         return view('dashboard', $data);
     }
