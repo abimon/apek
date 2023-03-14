@@ -275,7 +275,7 @@
                 <!-- Comment Row -->
                 @foreach($lcomm as $comment)
                 <div class="d-flex flex-row comment-row p-3 mt-0">
-                    @foreach($users->where('id',$comment->user_id)) as $user
+                    @foreach($users->where('id',$comment->user_id) as $user)
                     <div class="p-2"><img src="{{asset('storage/profile_images/'.$user->passport)}}" alt="user" width="50" class="rounded-circle"></div>
                     <div class="comment-text ps-2 ps-md-3 w-100">
                         <h5 class="font-medium">
@@ -285,7 +285,12 @@
                         <span class="mb-3 d-block">{{$comment->comment}} </span>
                         <div class="comment-footer d-md-flex align-items-center">
                             <span class="badge bg-primary rounded">
-                                
+                                @foreach($posts->where('id',$comment->post_id) as $post)
+                                {{$post->title}}
+                                @endforeach
+                                @foreach($poems->where('id',$comment->post_id) as $poem)
+                                {{$poem->title}}
+                                @endforeach
                             </span>
                             <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">{{date_format($lcomm->crated_at, 'F jS, Y')}}</div>
                         </div>
