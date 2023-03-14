@@ -14,7 +14,7 @@
     <link href="{{asset('storage/static/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('storage/static/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{asset('storage/static/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-    <link href="{{asset('storage/static/assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('storage/static/css/style.css')}}" rel="stylesheet">
     <style>
         .nav-link {
             font-weight: 600;
