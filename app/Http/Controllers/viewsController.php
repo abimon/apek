@@ -51,6 +51,7 @@ class viewsController extends Controller
         $comments = comment::select('post_id')->get();
         $likes = like::select('post_id')->get();
         $music = music::paginate(10);
+        $lcomm= comment::latest()->take(5)->get();
         $mcomments = mcomment::select('id', 'post_id')->get();
         $data = [
             'posts' => $posts,
@@ -60,6 +61,7 @@ class viewsController extends Controller
             'likes'=>$likes,
             'comments'=>$comments,
             'mcomments'=>$mcomments,
+            'lcomm'=>$lcomm
         ];
         return view('dashboard', $data);
     }
