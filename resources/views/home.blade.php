@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
                                 <div class="suscribe-text text-center">
-                                    <h3>Welcome to APEK Inc.</h3>
+                                    <h3 style='color:#000000;'>Welcome to APEK Inc.</h3>
                                     <a class="sus-btn" href="/blog/#songs4thesoul"><i class="fa fa-music"></i> Songs for the Soul <i class="fa fa-music-note"></i></a>
                                 </div>
                                 
@@ -32,7 +32,7 @@
                 <div class="row mt-2 d-flex justify-content-between">
                 <div class="">
                         <div class="section-headline text-center">
-                            <h2>About APEK Inc.</h2>
+                            <h2 style='color:#000000;'>About APEK Inc.</h2>
                         </div>
                         <div class="well-left">
                             <div class="single-well">
@@ -72,7 +72,7 @@
                     </div>
                     <div class="">
                         <div class="section-headline text-center">
-                            <h2>Meet Abimon <br> The face behind APEK Inc</h2>
+                            <h2 style='color:#000000;'>Meet Abimon <br> The face behind APEK Inc</h2>
                         </div>
                         <p>
                         <div class="single-well" >
@@ -161,7 +161,7 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="section-headline text-center">
-                                    <h2>Contact us</h2>
+                                    <h2 style='color:#000000;'>Contact us</h2>
                                 </div>
                             </div>
                         </div>
