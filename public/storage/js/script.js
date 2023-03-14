@@ -1,0 +1,1 @@
+console.log('edimon ombati abobo'.split(' '))

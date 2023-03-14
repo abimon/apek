@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
                     <div class="suscribe-text text-center">
-                        <h3 style='color:#000000;'>Welcome to APEK Inc.</h3>
+                        <h3 >Welcome to APEK Inc.</h3>
                         <a class="sus-btn" href="/speakinghearts/#songs4thesoul"><i class="fa fa-music"></i> Songs for the Soul <i class="fa fa-music-note"></i></a>
                     </div>
                     <p class="text-center">
@@ -26,7 +26,7 @@
             <div class="row mt-2 d-flex justify-content-between">
                 <div class="">
                     <div class="section-headline text-center">
-                        <h2 class="text-info">About APEK Inc.</h2>
+                        <h2>About APEK Inc.</h2>
                     </div>
                     <div class="well-left">
                         <div class="single-well">
@@ -35,11 +35,11 @@
                                 The hub nurtures young minds into competent developers who create softwares, hardwares and even links
                                 softwares to hardwares to achieve a multi-dimensional ease on human life.
                             </p>
-                            <h2 class='text-center text-info'>Our Vision</h2>
+                            <h2 class='text-center'>Our Vision</h2>
                             <hr>
                             <p class='text-center'>To achieve a satisfying link between beginner and experienced developers in the technology world moving through fields of data, artificial intelligency,
                                 softwares, internet of things and network systems resulting to a simplified day to day life in production.</p>
-                            <h2 class='text-center text-info'>Our Mission</h2>
+                            <h2 class='text-center'>Our Mission</h2>
                             <hr>
                             <p class='text-center'>Bringing young people together and help realize their potential in solving day to day life challenges using simple methods</p>
                             <!--
@@ -66,7 +66,7 @@
                 </div>
                 <div class="">
                     <div class="section-headline text-center">
-                        <h2 class="text-info">Meet Abimon The face behind APEK Inc</h2>
+                        <h2>Meet Abimon The face behind APEK Inc</h2>
                     </div>
                     <p>
                     <div class="single-well">
@@ -155,7 +155,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="section-headline text-center">
-                            <h2 class="text-info">Contact us</h2>
+                            <h2>Contact us</h2>
                         </div>
                     </div>
                 </div>

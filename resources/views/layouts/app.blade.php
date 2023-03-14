@@ -8,21 +8,9 @@
     <title>APEK INC. | {{$title}}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Vendor CSS Files -->
-    <link href="{{asset('storage/static/assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
     <link href="{{asset('storage/static/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('storage/static/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-    <link href="{{asset('storage/static/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-    <link href="{{asset('storage/static/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
-    <link href="{{asset('storage/static/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-    <link href="{{asset('storage/assets/css/style.css')}}" rel="stylesheet">
-    <style>
-        .nav-link {
-            font-weight: 600;
-        }
-        .nav-link:active {
-            color: cyan;
-        }
-    </style>
+    <link href="{{asset('storage/static/assets/css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>

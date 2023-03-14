@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<link href="{{asset('storage/static/css/style.css')}}" rel="stylesheet">
-<link href="{{asset('storage/static/css/style.min.css')}}" rel="stylesheet">
+<link href="{{asset('storage/css/style.css')}}" rel="stylesheet">
+<link href="{{asset('storage/css/style.min.css')}}" rel="stylesheet">
 <div class="bg-transparent" style="height:80px;"></div>
 <header class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">{{Auth()->user()->name}}</a>
@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/createpost">
+                <a class="nav-link" href="/create">
                     <span class="icon-holder">
                         <i class="c-black bi bi-card-list mR-10"></i>
                     </span>
