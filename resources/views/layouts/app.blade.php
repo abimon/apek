@@ -19,7 +19,6 @@
     <style>
         .nav-link {
             font-weight: 600;
-            color:white;
         }
 
         .nav-link:active {
