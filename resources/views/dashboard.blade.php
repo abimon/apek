@@ -2,7 +2,7 @@
 @section('dashboard')
 <style>
     /* The switch - the box around the slider */
-    .switch {
+    .switchee {
         position: relative;
         display: inline-block;
         width: 30px;
@@ -10,14 +10,14 @@
     }
 
     /* Hide default HTML checkbox */
-    .switch input {
+    .switchee input {
         opacity: 0;
         width: 0;
         height: 0;
     }
 
     /* The slider */
-    .slider {
+    .slideree {
         position: absolute;
         cursor: pointer;
         top: 0;
@@ -29,7 +29,7 @@
         transition: .4s;
     }
 
-    .slider:before {
+    .slideree:before {
         position: absolute;
         content: "";
         height: 16px;
@@ -41,26 +41,26 @@
         transition: .4s;
     }
 
-    .checked+.slider {
+    .checkedee+.slideree {
         background-color: #2196F3;
     }
 
-    .slider:focus {
+    .slideree:focus {
         box-shadow: 0 0 1px #2196F3;
     }
 
-    .checked+.slider:before {
+    .checkedee+.slideree:before {
         -webkit-transform: translateX(10px);
         -ms-transform: translateX(10px);
         transform: translateX(10px);
     }
 
     /* Rounded sliders */
-    .slider.round {
+    .slideree.roundee {
         border-radius: 34px;
     }
 
-    .slider.round:before {
+    .slideree.roundee:before {
         border-radius: 50%;
     }
 </style>
@@ -112,9 +112,9 @@
                                         <span class="text-success">
                                             <div class="">
                                                 <a href="togglePost/{{$post->id}}">
-                                                    <label class="switch">
-                                                        <i type="button" class="{{($post->posted)==1?'checked':''}}"></i>
-                                                        <span class="slider round"></span>
+                                                    <label class="switchee">
+                                                        <i type="button" class="{{($post->posted)==1?'checkedee':''}}"></i>
+                                                        <span class="slideree roundee"></span>
                                                     </label>
                                                 </a>
                                             </div>
@@ -180,9 +180,9 @@
                                         <span class="text-success">
                                             <div class="">
                                                 <a href="togglePost/{{$poem->id}}">
-                                                    <label class="switch">
-                                                        <i type="button" class="{{($poem->posted)==1?'checked':''}}"></i>
-                                                        <span class="slider round"></span>
+                                                    <label class="switchee">
+                                                        <i type="button" class="{{($poem->posted)==1?'checkedee':''}}"></i>
+                                                        <span class="slideree roundee"></span>
                                                     </label>
                                                 </a>
                                             </div>
@@ -244,9 +244,9 @@
                                         <span class="text-success">
                                             <div class="">
                                                 <a href="togglePost/{{$piece->id}}">
-                                                    <label class="switch">
-                                                        <i type="button" class="{{($piece->posted)==1?'checked':''}}"></i>
-                                                        <span class="slider round"></span>
+                                                    <label class="switchee">
+                                                        <i type="button" class="{{($piece->posted)==1?'checkedee':''}}"></i>
+                                                        <span class="slideree roundee"></span>
                                                     </label>
                                                 </a>
                                             </div>
