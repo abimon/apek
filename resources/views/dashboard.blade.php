@@ -247,7 +247,7 @@
                                     <td>
                                         <span class="text-success">
                                             <div class="">
-                                                <a href="togglePost/{{$poem->id}}">
+                                                <a href="togglePost/{{$piece->id}}">
                                                     <label class="switch">
                                                         <i type="button" class="{{($piece->posted)==1?'checked':''}}"></i>
                                                         <span class="slider round"></span>
