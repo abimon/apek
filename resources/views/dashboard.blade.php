@@ -65,6 +65,7 @@
     }
 </style>
 <div class="m-2" style='min-height:500px;'>
+    @if($posts->count() > 0)
     <div class="col-md-12">
         <!-- #posts Report ==================== -->
         <div class="bd bgc-white">
@@ -110,7 +111,7 @@
                                     <td>
                                         <span class="text-success">
                                             <div class="">
-                                                <a href="togglePost/{{$poem->id}}">
+                                                <a href="togglePost/{{$post->id}}">
                                                     <label class="switch">
                                                         <i type="button" class="{{($post->posted)==1?'checked':''}}"></i>
                                                         <span class="slider round"></span>
@@ -131,6 +132,8 @@
             </div>
         </div>
     </div>
+    @endif
+    @if($poems->count()>0)
     <div class="col-md-12">
         <!-- #posts Report ==================== -->
         <div class="bd bgc-white">
@@ -197,6 +200,8 @@
             </div>
         </div>
     </div>
+    @endif
+    @if($music->count()>0)
     <div class="col-md-12">
         <!-- #posts Report ==================== -->
         <div class="bd bgc-white">
@@ -262,5 +267,6 @@
             </div>
         </div>
     </div>
+    @endif
 </div>
 @endsection
