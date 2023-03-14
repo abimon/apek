@@ -39,7 +39,7 @@
                 <ul>
                     <li><a class="nav-link scrollto {{request()->path()=='/'?'active':''}}" href="/">Home</a></li>
                     <li><a class="nav-link scrollto" href="/#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="/#contact">Poetry</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='poetry'?'active':''}}" href="/poetry">Poetry</a></li>
                     <li><a href="/speakinghearts/#songs4thesoul" class="nav-link scrollto">Songs4theSoul</a></li>
                     <li><a class="nav-link scrollto {{request()->path()=='speakinghearts'?'active':''}}" href="/speakinghearts">Speaking Hearts</a></li>
                     <li><a class="nav-link scrollto {{request()->path()=='dashboard'?'active':''}}" href="/dashboard">Dashboard</a></li>

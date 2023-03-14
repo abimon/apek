@@ -15,7 +15,7 @@ class viewsController extends Controller
 {
     function blog()
     {
-        $posts = post::where(['posted' => 1])->where(['category'=>'poem'])->orderBy('id', 'desc')->get();
+        $posts = post::where(['posted' => 1])->where(['category'=>'blog'])->orderBy('id', 'desc')->get();
         $likes = like::all();
         $comments = comment::all();
         $music = music::all();
