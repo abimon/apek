@@ -265,95 +265,95 @@
     </div>
     @endif
     <div class="row">
-    <!-- .col -->
-    <div class="col-md-12 col-lg-7 col-sm-12">
-        <div class="card white-box p-0">
-            <div class="card-body">
-                <h3 class="box-title mb-0">Recent Comments</h3>
-            </div>
-            <div class="comment-widgets">
-                <!-- Comment Row -->
-                @foreach($lcomm as $comment)
-                <div class="d-flex flex-row comment-row p-3 mt-0">
-                    @foreach($users->where('id',$comment->user_id) as $user)
-                    <div class="p-2"><img src="{{asset('storage/profile_images/'.$user->passport)}}" alt="user" width="50" class="rounded-circle"></div>
-                    <div class="comment-text ps-2 ps-md-3 w-100">
-                        <h5 class="font-medium">
-                            {{$user->name}}
-                        </h5>
-                        @endforeach
-                        <span class="mb-3 d-block">{{$comment->comment}} </span>
-                        <div class="comment-footer d-md-flex align-items-center">
-                            <span class="badge bg-primary rounded">
-                                @foreach($posts->where('id',$comment->post_id) as $post)
-                                {{$post->title}}
-                                @endforeach
-                                @foreach($poems->where('id',$comment->post_id) as $poem)
-                                {{$poem->title}}
-                                @endforeach
-                            </span>
-                            <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">{{date_format($lcomm->created_at, 'F jS, Y')}}</div>
+        <!-- .col -->
+        <div class="col-md-12 col-lg-7 col-sm-12">
+            <div class="card white-box p-0">
+                <div class="card-body">
+                    <h3 class="box-title mb-0">Recent Comments</h3>
+                </div>
+                <div class="comment-widgets">
+                    <!-- Comment Row -->
+                    @foreach($lcomm as $comment)
+                    <div class="d-flex flex-row comment-row p-3 mt-0">
+                        @foreach($users->where('id',$comment->user_id) as $user)
+                        <div class="p-2"><img src="{{asset('storage/profile_images/'.$user->passport)}}" alt="user" width="50" class="rounded-circle"></div>
+                        <div class="comment-text ps-2 ps-md-3 w-100">
+                            <h5 class="font-medium">
+                                {{$user->name}}
+                            </h5>
+                            @endforeach
+                            <span class="mb-3 d-block">{{$comment->comment}} </span>
+                            <div class="comment-footer d-md-flex align-items-center">
+                                <span class="badge bg-primary rounded">
+                                    @foreach($posts->where('id',$comment->post_id) as $post)
+                                    {{$post->title}}
+                                    @endforeach
+                                    @foreach($poems->where('id',$comment->post_id) as $poem)
+                                    {{$poem->title}}
+                                    @endforeach
+                                </span>
+                                <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">{{date_format($comment->created_at, 'F jS, Y')}}</div>
+                            </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
         </div>
-    </div>
-    <div class="col-lg-5 col-md-12 col-sm-12">
-        <div class="card white-box p-0">
-            <div class="card-heading">
-                <h3 class="box-title mb-0">Users Listing</h3>
-            </div>
-            <div class="card-body">
-                <ul class="chatonline">
-                    @foreach($users as $user)
-                    <li>
-                        <div class="call-chat">
-                            @if(Auth()->user()->role=='Admin')
-                            <button class="btn btn-warning btn-circle btn" type="button" data-bs-toggle="modal" data-bs-target="#modal{{$user->id}}">
-                                <i class="bi bi-three-dots text-info"></i>
-                            </button>
-                            @endif
-                        </div>
-                        <div class="d-flex justify-content-start">
-                            <img src="{{asset('storage/profile_images/'.$user->passport)}}" alt="user-img" class="img-circle">
-                            <p>{{$user->name}}</p>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="modal{{$user->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel"><b>{{$user->name}}</b></h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <img src="{{asset('storage/profile_images/'.$user->passport)}}" style="width:100%;">
-                                            </div>
-                                            <div class="col-8">
-                                                <p></p>
-                                                <p>Serves currently as {{$user->role}}</p>
-                                                <p>Make
-                                                    <a href="make/admin/{{$user->id}}"><span class="badge bg-info rounded">Admin</span></a>
-                                                    <a href="make/editor/{{$user->id}}"><span class="badge bg-primary rounded">Editor</span></a>
-                                                    <a href="make/user/{{$user->id}}"><span class="badge bg-success rounded">User</span></a>
-                                                </p>
+        <div class="col-lg-5 col-md-12 col-sm-12">
+            <div class="card white-box p-0">
+                <div class="card-heading">
+                    <h3 class="box-title mb-0">Users Listing</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="chatonline">
+                        @foreach($users as $user)
+                        <li>
+                            <div class="call-chat">
+                                @if(Auth()->user()->role=='Admin')
+                                <button class="btn btn-warning btn-circle btn" type="button" data-bs-toggle="modal" data-bs-target="#modal{{$user->id}}">
+                                    <i class="bi bi-three-dots text-info"></i>
+                                </button>
+                                @endif
+                            </div>
+                            <div class="d-flex justify-content-start">
+                                <img src="{{asset('storage/profile_images/'.$user->passport)}}" alt="user-img" class="img-circle">
+                                <p>{{$user->name}}</p>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal{{$user->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel"><b>{{$user->name}}</b></h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="{{asset('storage/profile_images/'.$user->passport)}}" style="width:100%;">
+                                                </div>
+                                                <div class="col-8">
+                                                    <p></p>
+                                                    <p>Serves currently as {{$user->role}}</p>
+                                                    <p>Make
+                                                        <a href="make/admin/{{$user->id}}"><span class="badge bg-info rounded">Admin</span></a>
+                                                        <a href="make/editor/{{$user->id}}"><span class="badge bg-primary rounded">Editor</span></a>
+                                                        <a href="make/user/{{$user->id}}"><span class="badge bg-success rounded">User</span></a>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    @endforeach
-                </ul>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
+        <!-- /.col -->
     </div>
-    <!-- /.col -->
-</div>
 </div>
 @endsection
