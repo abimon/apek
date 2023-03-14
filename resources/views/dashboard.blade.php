@@ -292,7 +292,7 @@
                                 {{$poem->title}}
                                 @endforeach
                             </span>
-                            <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">{{date_format($lcomm->crated_at, 'F jS, Y')}}</div>
+                            <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">{{date_format($lcomm->created_at, 'F jS, Y')}}</div>
                         </div>
                     </div>
                 </div>
