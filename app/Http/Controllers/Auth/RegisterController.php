@@ -50,10 +50,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'fname'=> ['required', 'string', 'max:255'],
+            'lname'=> ['required', 'string', 'max:255'],
+            'email'=> ['required', 'string', 'email', 'max:255', 'unique:users'],
             'avatar' => ['image', 'required'],
+            'password'=> ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -66,11 +67,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $extension = request()->file('avatar')->getClientOriginalExtension();
-        $filename = (request()->fname).time(). '.' . $extension;
+        $filename = (request()->fname).'.'. $extension;
         request()->file('avatar')->storeAs('public/profile_images', $filename);
         
         return User::create([
-            'name' => $data['name'],
+            'name' => $data['fname'].' '.$data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'passport'=>$filename,
