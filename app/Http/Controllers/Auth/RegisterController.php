@@ -66,8 +66,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $extension = request()->file('avatar')->getClientOriginalExtension();
-        $filenametostore = 'user_'.time(). '.' . $extension;
-        request()->file('avatar')->storeAs('public/profile_images', $filenametostore);
+        $filename = 'user_'.time(). '.' . $extension;
+        request()->file('avatar')->storeAs('public/profile_images', $filename);
         
         return User::create([
             'name' => $data['name'],
