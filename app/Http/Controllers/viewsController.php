@@ -45,9 +45,11 @@ class viewsController extends Controller
     }
     function dashboard()
     {
-        $posts = post::all();
+        $posts = post::page(10);
+        $users = User::select('name', 'email', 'id', 'profile')->get();
         $data = [
-            'posts' => $posts
+            'posts' => $posts,
+            'users'=>$users
         ];
         return view('dashboard', $data);
     }
