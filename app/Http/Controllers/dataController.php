@@ -87,7 +87,7 @@ class dataController extends Controller
     }
     
     
-    function unpublish($id)
+    function publish($id)
     {
         $post = post::find($id);
         if($post->posted==1){

@@ -230,7 +230,6 @@
                                     <th class=" bdwT-0">Singer</th>
                                     <th class=" bdwT-0">Creation Date</th>
                                     <th class=" bdwT-0">Status</th>
-                                    <th class=" bdwT-0">Likes</th>
                                     <th class=" bdwT-0">Comments</th>
                                 </tr>
                             </thead>
@@ -239,10 +238,7 @@
                                 <tr>
                                     <th class=" bdwT-0">{{$y+1}}</th>
                                     <td class="fw-600">{{$piece->title}}</td>
-                                    @foreach($users->where('id', $piece->user_id) as $user)
-                                    <td>{{$user->name}}
-                                        @endforeach
-                                    </td>
+                                    <td>{{$piece->composer}}</td>
                                     <td>{{date_format(($piece->created_at),'F jS, Y')}}</td>
                                     <td>
                                         <span class="text-success">
