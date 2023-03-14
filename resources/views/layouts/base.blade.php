@@ -67,7 +67,7 @@
                     <span class="icon-holder">
                         <i class="c-deep-blue-500 bi bi-person-badge mR-10"></i>
                     </span>
-                    <span class="title">Profile</span>
+                    <span class="title">My Profile</span>
                 </a>
             </li>
             <li class="nav-item ">
