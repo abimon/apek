@@ -68,13 +68,13 @@
     @if($posts->count() > 0)
     <div class="col-md-12">
         <!-- #posts Report ==================== -->
-        <div class="bd bg-info">
+        <div class="bd bg-white">
             <div class="layers" id="members">
                 <div class="layer w-100 p-20">
                     <h6 class="lh-1">Speaking Hearts</h6>
                 </div>
                 <div class="layer w-100">
-                    <div class="c-white p-20">
+                    <div class="bg-info c-white p-2">
                         <div class="peers ai-c jc-sb gap-40">
                             <div class="peer peer-greed">
                                 <h5>{{date('F Y')}}</h5>
