@@ -71,7 +71,7 @@ class RegisterController extends Controller
         request()->file('avatar')->storeAs('public/profile_images', $filename);
         
         return User::create([
-            'name' => $data['fname'].' '.$data['name'],
+            'name' => $data['fname'].' '.$data['lname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'passport'=>$filename,
