@@ -43,9 +43,9 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Passport') }}</label>
 
                             <div class="col-md-6">
-                                <input id="file" type="file" accept="image/*" class="form-control @error('passport') is-invalid @enderror" name="passport" value="{{ old('passport') }}" required autocomplete="passport">
+                                <input id="file" type="file" accept="image/*" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('passport') }}" required autocomplete="passport">
 
-                                @error('passport')
+                                @error('avatar')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
