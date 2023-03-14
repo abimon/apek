@@ -19,7 +19,6 @@
         .nav-link {
             font-weight: 600;
         }
-
         .nav-link:active {
             color: cyan;
         }
