@@ -51,7 +51,7 @@ class viewsController extends Controller
         $comments = comment::select('post_id')->get();
         $likes = comment::select('post_id')->get();
         $music = music::select('title')->paginate(10);
-        $mcomments = mcomment::select('id', 'post_is')->get();
+        $mcomments = mcomment::select('id', 'post_id')->get();
         $data = [
             'posts' => $posts,
             'poems'=>$poems,
