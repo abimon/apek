@@ -28,8 +28,8 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 Route::post('/songs', [dataController::class, 'songs']);
-Route::get('/blog', [viewsController::class, 'blog']);
-Route::get('/blog/{title}', [viewsController::class, 'post']);
+Route::get('/speakinghearts', [viewsController::class, 'blog']);
+Route::get('/speakinghearts/{title}', [viewsController::class, 'post']);
 Route::get('/song/{title}', [viewsController::class, 'song']);
 Route::get('/like/{id}', [dataController::class, 'like']);
 Route::post('/comment/{id}', [dataController::class, 'comment']);

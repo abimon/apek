@@ -31,11 +31,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#file">
+                <a class="nav-link" href="/create">
                     <span class="icon-holder">
-                        <i class="c-deep-orange-500 bi bi-files mR-10"></i>
+                        <i class="c-deep-orange-500 bi bi-card-list mR-10"></i>
                     </span>
-                    <span class="title">Blog</span>
+                    <span class="title">Speaking Hearts</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -43,23 +43,23 @@
                     <span class="icon-holder">
                         <i class="c-black bi bi-card-list mR-10"></i>
                     </span>
-                    <span class="title">Poetry</span>
+                    <span class="title">Write Poem</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/diary">
                     <span class="icon-holder">
-                        <i class="c-black bi bi-card-list mR-10"></i>
+                        <i class="c-black bi bi-calendar-heart mR-10"></i>
                     </span>
-                    <span class="title">Diary</span>
+                    <span class="title">My Diary</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/music">
                     <span class="icon-holder">
-                        <i class="c-black bi bi-card-list mR-10"></i>
+                        <i class="c-black bi bi-music-note-list mR-10"></i>
                     </span>
-                    <span class="title">Music</span>
+                    <span class="title">My Music</span>
                 </a>
             </li>
             <li class="nav-item">

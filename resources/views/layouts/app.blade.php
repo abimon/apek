@@ -31,7 +31,7 @@
                     <li><a class="nav-link scrollto" href="/#portfolio">Portfolio</a></li>
                     <li><a class="nav-link scrollto" href="/#price">Pricing</a></li>
                     <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-                    <li><a class="nav-link scrollto {{request()->path()=='blog'?'active':''" href="/blog">Blog</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='speakinghearts'?'active':''" href="/speakinghearts">Speaking Hearts</a></li>
                     <li><a class="nav-link scrollto {{request()->path()=='dashboard'?'active':''" href="/dashboard">Dashboard</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
