@@ -332,7 +332,7 @@
                                                 <img src="{{asset('storage/profile_images/'.$user->profile)}}" style="width:100%;">
                                             </div>
                                             <div class="col-8">
-                                                <p>Joined on {{date_format($user->created_at, 'F jS, Y')}}</p>
+                                                <p></p>
                                                 <p>Serves currently as {{$user->role}}</p>
                                                 <p>Make
                                                     <a href="make/admin/{{$user->id}}"><span class="badge bg-info rounded">Admin</span></a>
