@@ -309,42 +309,22 @@
                     <ul class="chatonline">
                         @foreach($users as $user)
                         <li>
-                            <div class="call-chat">
-                                @if(Auth()->user()->role=='Admin')
-                                <button class="btn btn-warning btn-circle btn" type="button" data-bs-toggle="modal" data-bs-target="#modal{{$user->id}}">
-                                    <i class="bi bi-three-dots text-info"></i>
-                                </button>
-                                @endif
-                            </div>
-                            <div class="d-flex justify-content-start">
-                                <img src="{{asset('storage/profile_images/'.$user->passport)}}" alt="user-img" class="img-circle">
-                                <p>{{$user->name}}</p>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="modal{{$user->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel"><b>{{$user->name}}</b></h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <img src="{{asset('storage/profile_images/'.$user->passport)}}" style="width:100%;">
-                                                </div>
-                                                <div class="col-8">
-                                                    <p></p>
-                                                    <p>Serves currently as {{$user->role}}</p>
-                                                    <p>Make
-                                                        <a href="make/admin/{{$user->id}}"><span class="badge bg-info rounded">Admin</span></a>
-                                                        <a href="make/editor/{{$user->id}}"><span class="badge bg-primary rounded">Editor</span></a>
-                                                        <a href="make/user/{{$user->id}}"><span class="badge bg-success rounded">User</span></a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-4">
+                                <img src="{{asset('storage/profile_images/'.$user->passport)}}" alt="user-img" style="width: 100%;" class="img-circle">
+                                </div>
+                                
+                                <div class="col-8">
+                                    <p class="text-bold"><b>{{$user->name}}</b></p>
+                                    <p>Serves currently as {{$user->role}}</p>
+                                    @if(Auth()->user()->role=='Admin')
+                                    <?php $roles= ['Admin', 'Editor','Guest'];?>
+                                    <p>Make 
+                                        <a href="make/admin/{{$user->id}}"><span class="badge bg-info rounded">Admin</span></a>
+                                        <a href="make/editor/{{$user->id}}"><span class="badge bg-primary rounded">Editor</span></a>
+                                        <a href="make/user/{{$user->id}}"><span class="badge bg-success rounded">User</span></a>
+                                    </p>
+                                    @endif
                                 </div>
                             </div>
                         </li>
