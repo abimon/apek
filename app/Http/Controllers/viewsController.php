@@ -18,6 +18,7 @@ class viewsController extends Controller
         $posts = post::where(['posted' => 1])->where(['category'=>'poem'])->orderBy('id', 'desc')->get();
         $likes = like::all();
         $comments = comment::all();
+        $music = music::all();
         $mcomments = mcomment::all();
         $users = User::select('id', 'name', 'passport')->get();
         $data = [
@@ -26,6 +27,7 @@ class viewsController extends Controller
             'likes' => $likes,
             'comments' => $comments,
             'mcomments' => $mcomments,
+            'music' => $music
         ];
         return view('blog', $data);
     }
