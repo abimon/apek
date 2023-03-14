@@ -49,7 +49,7 @@ class viewsController extends Controller
         $posts = post::where(['category'=>'blog'])->paginate(10);
         $users = User::select('name', 'email', 'id', 'passport')->paginate(10);
         $comments = comment::select('post_id')->get();
-        $likes = comment::select('post_id')->get();
+        $likes = like::select('post_id')->get();
         $music = music::paginate(10);
         $mcomments = mcomment::select('id', 'post_id')->get();
         $data = [
