@@ -29,6 +29,7 @@ Route::get('/logout', function () {
 });
 Route::post('/songs', [dataController::class, 'songs']);
 Route::get('/speakinghearts', [viewsController::class, 'blog']);
+Route::get('/poetry', [viewsController::class, 'poetry']);
 Route::get('/speakinghearts/{title}', [viewsController::class, 'post']);
 Route::get('/song/{title}', [viewsController::class, 'song']);
 Route::get('/like/{id}', [dataController::class, 'like']);

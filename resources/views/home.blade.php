@@ -10,7 +10,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
                                 <div class="suscribe-text text-center">
                                     <h3 style='color:#000000;'>Welcome to APEK Inc.</h3>
-                                    <a class="sus-btn" href="/blog/#songs4thesoul"><i class="fa fa-music"></i> Songs for the Soul <i class="fa fa-music-note"></i></a>
+                                    <a class="sus-btn" href="/speakinghearts/#songs4thesoul"><i class="fa fa-music"></i> Songs for the Soul <i class="fa fa-music-note"></i></a>
                                 </div>
                                 
                                 <i class="blockquote-footer m-2 text-light text-center">

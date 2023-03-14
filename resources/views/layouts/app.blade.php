@@ -37,13 +37,13 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto {{request()->path()=='/'?'active':''" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='/'?'active':''}}" href="/">Home</a></li>
                     <li><a class="nav-link scrollto" href="/#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="/#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="/#price">Pricing</a></li>
+                    <li><a href="/speakinghearts/#songs4thesoul" class="nav-link scrollto">Songs4theSoul</a></li>
+                    <li><a class="nav-link scrollto" href="/#contact">Poetry</a></li>
                     <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-                    <li><a class="nav-link scrollto {{request()->path()=='speakinghearts'?'active':''" href="/speakinghearts">Speaking Hearts</a></li>
-                    <li><a class="nav-link scrollto {{request()->path()=='dashboard'?'active':''" href="/dashboard">Dashboard</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='speakinghearts'?'active':''}}" href="/speakinghearts">Speaking Hearts</a></li>
+                    <li><a class="nav-link scrollto {{request()->path()=='dashboard'?'active':''}}" href="/dashboard">Dashboard</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

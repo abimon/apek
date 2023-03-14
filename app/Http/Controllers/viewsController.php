@@ -15,11 +15,10 @@ class viewsController extends Controller
 {
     function blog()
     {
-        $posts = post::where(['posted' => 1])->orderBy('id', 'desc')->get();
+        $posts = post::where(['posted' => 1])->where(['category'=>'poem'])->orderBy('id', 'desc')->get();
         $likes = like::all();
         $comments = comment::all();
         $mcomments = mcomment::all();
-        $music = music::all();
         $users = User::select('id', 'name', 'passport')->get();
         $data = [
             'posts' => $posts,
@@ -27,7 +26,6 @@ class viewsController extends Controller
             'likes' => $likes,
             'comments' => $comments,
             'mcomments' => $mcomments,
-            'music' => $music
         ];
         return view('blog', $data);
     }
@@ -64,6 +62,23 @@ class viewsController extends Controller
             'lcomm'=>$lcomm
         ];
         return view('dashboard', $data);
+    }
+    function poetry(){
+        $posts = post::where(['posted' => 1])->where(['category'=>'poem'])->orderBy('id', 'desc')->get();
+        $likes = like::all();
+        $comments = comment::all();
+        $mcomments = mcomment::all();
+        $music = music::all();
+        $users = User::select('id', 'name', 'passport')->get();
+        $data = [
+            'posts' => $posts,
+            "users" => $users,
+            'likes' => $likes,
+            'comments' => $comments,
+            'mcomments' => $mcomments,
+            'music' => $music
+        ];
+        return view('blog', $data);
     }
     function post($title)
     {
