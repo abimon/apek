@@ -285,12 +285,7 @@
                         <span class="mb-3 d-block">{{$comment->comment}} </span>
                         <div class="comment-footer d-md-flex align-items-center">
                             <span class="badge bg-primary rounded">
-                                @foreach($posts->where('id',$comment->post_id) as $post)
-                                {{$post->title}}
-                                @endforeach
-                                @foreach($poems->where('id',$comment->post_id) as $poem)
-                                {{$poem->title}}
-                                @endforeach
+                                
                             </span>
                             <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">{{date_format($lcomm->crated_at, 'F jS, Y')}}</div>
                         </div>
