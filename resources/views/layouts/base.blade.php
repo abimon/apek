@@ -46,14 +46,16 @@
                     <span class="title">Write Poem</span>
                 </a>
             </li>
+            @if(Auth()->user()->role=='Admin')
             <li class="nav-item">
                 <a class="nav-link" href="/diary">
                     <span class="icon-holder">
-                        <i class="c-black bi bi-calendar-heart mR-10"></i>
+                        <i class="c-black bi bi-journal mR-10"></i>
                     </span>
                     <span class="title">My Diary</span>
                 </a>
             </li>
+            @endif
             <li class="nav-item">
                 <a class="nav-link" href="/music">
                     <span class="icon-holder">
