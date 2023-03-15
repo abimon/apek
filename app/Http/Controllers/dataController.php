@@ -52,9 +52,6 @@ class dataController extends Controller
 
         return redirect('/blog/#songs4thesoul');
     }
-    
-    
-    
     function editpost($title)
     {
         $post = post::where(['title' => $title])->get();
@@ -85,8 +82,6 @@ class dataController extends Controller
         $post->update();
         return redirect('/dashboard');
     }
-    
-    
     function publish($id)
     {
         $post = post::find($id);
@@ -209,5 +204,11 @@ class dataController extends Controller
         } else {
             echo $response;
         }
+    }
+    function role($role, $id){
+        User::where(['id'=>$id])->update([
+            'role'=>$role
+        ]);
+        return redirect()->back();
     }
 }
