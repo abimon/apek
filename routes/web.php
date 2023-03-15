@@ -55,6 +55,6 @@ Route::middleware('sessionCheck')->group(function () {
     Route::get('/togglePost/{id}', [dataController::class, 'publish']);
     Route::post('/sendsms', [dataController::class, 'sendsms']);
     Route::get('/make/{role}/{id}', [dataController::class, 'role']);
-    Route::get('/deleteUser', [dataController::class, 'deleteUser']);
+    Route::get('/deleteUser/{id}', [dataController::class, 'deleteUser']);
 });
 Auth::routes();
