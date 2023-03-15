@@ -1,4 +1,4 @@
-@extends('layouts.app',['title'=>'{{$post->title}}'])
+@extends('layouts.app',['title'=>$post->title])
 @section('content')
 <div class="row">
     <div>
@@ -28,7 +28,6 @@
             </div>
             <div>
                 @foreach($mcomments as $comment)
-                @if(($comment->post_id)==($post->id))
                 <div class="text-dark me-5">
                     @foreach($users as $user)
                     @if(($user->id)==($comment->user_id))
@@ -37,7 +36,6 @@
                     @endif
                     @endforeach
                 </div>
-                @endif
                 @endforeach
             </div>
             <div class="mt-1">

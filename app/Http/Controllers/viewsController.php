@@ -33,11 +33,11 @@ class viewsController extends Controller
     }
     function song($title)
     {
-        $post = music::where(['title' => $title])->get();
+        $post = music::where(['title' => $title])->first();
         $users = User::all();
-        $comments = mcomment::all();
+        $comments = mcomment::where(['post_id'=>$post->id])->get();
         $data = [
-            'posts' => $post,
+            'post' => $post,
             'mcomments' => $comments,
             'users' => $users
         ];
