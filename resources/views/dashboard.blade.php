@@ -320,9 +320,10 @@
                                     @if(Auth()->user()->role=='Admin')
                                     <?php $roles= ['Admin', 'Editor','Guest'];?>
                                     <p>Make 
-                                        <a href="make/admin/{{$user->id}}"><span class="badge bg-info rounded">Admin</span></a>
-                                        <a href="make/editor/{{$user->id}}"><span class="badge bg-primary rounded">Editor</span></a>
-                                        <a href="make/user/{{$user->id}}"><span class="badge bg-success rounded">User</span></a>
+                                        <a href="/make/admin/{{$user->id}}"><span class="badge bg-info rounded">Admin</span></a>
+                                        <a href="/make/editor/{{$user->id}}"><span class="badge bg-primary rounded">Editor</span></a>
+                                        <a href="/make/user/{{$user->id}}"><span class="badge bg-success rounded">User</span></a>
+                                        <a href="/deleteUser/{{$user->id}}"><span class="badge bg-danger rounded">Delete</span></a>
                                     </p>
                                     @endif
                                 </div>

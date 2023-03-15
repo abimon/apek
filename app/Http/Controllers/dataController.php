@@ -211,4 +211,14 @@ class dataController extends Controller
         ]);
         return redirect()->back();
     }
+    function deleteUser($id){
+        User::destroy($id);
+        post::where(['user_id'=>$id])->delete();
+        comment::where(['user_id'=>$id])->delete();
+        like::where(['user_id'=>$id])->delete();
+        mcomment::where(['user_id'=>$id])->delete();
+        music::where(['user_id'=>$id])->delete();
+        diary::where(['user_id'=>$id])->delete();
+        return redirect()->back();
+    }
 }
