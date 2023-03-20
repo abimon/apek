@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class music extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'title',
+        'filepath',
+        'body',
+        'composer',
+        'posted'
+    ];
 }

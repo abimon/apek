@@ -157,9 +157,9 @@ class dataController extends Controller
     }
     function savediary(Request $req)
     {
-        $entry = new diary;
-        $entry->emotions = $req->post;
-        $entry->save();
+        diary::create([
+            'emotions'=>request()->post
+        ]);
         return redirect()->back();
     }
     function sendsms()

@@ -179,12 +179,14 @@
                                     <td>
                                         <span class="text-success">
                                             <div class="">
+                                                @if(($poem->user_id)==(Auth()->user()->id))
                                                 <a href="togglePost/{{$poem->id}}">
                                                     <label class="switchee">
                                                         <i type="button" class="{{($poem->posted)==1?'checkedee':''}}"></i>
                                                         <span class="slideree roundee"></span>
                                                     </label>
                                                 </a>
+                                                $ed
                                             </div>
                                         </span>
                                     </td>
