@@ -186,7 +186,7 @@
                                                         <span class="slideree roundee"></span>
                                                     </label>
                                                 </a>
-                                                $ed
+                                                @endif
                                             </div>
                                         </span>
                                     </td>
