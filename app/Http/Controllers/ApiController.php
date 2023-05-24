@@ -17,7 +17,7 @@ class ApiController extends Controller
             $data = [
                 'posts'=>$post
             ];
-            return response()->json($data,200);
+            return response($data,200);
         }
         else{
             return response()->json(404);
