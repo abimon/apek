@@ -84,10 +84,17 @@ class ApiController extends Controller
             'message'=>'Post deleted ssuccessiful'
         ],200);
     }
-    public function read(){
-        $posts= diary::all();
-        return response([
-            'posts'=>$posts
-        ]);
+    public function read($token){
+        //AbimonOmbati@2022
+        $posts= diary::where('category','Blog')->first();
+        if($token=='QWJpbW9uT21iYXRpQDIwMjI='){
+            $data = [
+                'posts'=>$posts
+            ];
+            return response()->json($data,200);
+        }
+        else{
+            return response()->json(404);
+        }
     }
 }

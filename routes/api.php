@@ -19,4 +19,4 @@ use App\Http\Controllers\dataController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/read',[ApiController::class, 'read']);
+Route::get('/read/{token}',[ApiController::class, 'read']);
