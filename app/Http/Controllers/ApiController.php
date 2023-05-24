@@ -12,10 +12,10 @@ class ApiController extends Controller
 {
     public function read($token){
         //AbimonOmbati@2022
-        $posts= post::where('category','Blog')->first();
+        $post= post::where('category','Blog')->first();
         if($token=='QWJpbW9uT21iYXRpQDIwMjI='){
             $data = [
-                'posts'=>$posts
+                'post'=>$post->body
             ];
             return response()->json($data,200);
         }
