@@ -3,7 +3,7 @@
 <div class="m-2" style='min-height:500px;'>
     <form action="/uploadhymnal" method="post" class="row" enctype="multipart/form-data" novalidate class="needs-validation">
         @csrf
-        <div class="p-2">
+        <div class="p-2 m-6">
             <div class="form-floating mb-2">
                 <input type="text" name="title" placeholder=' ' class="form-control" required>
                 <label for="">Swahili Title</label>
@@ -61,21 +61,21 @@
         </div>
     </form>
 </div>
-<script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/super-build/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 <script>
     CKEDITOR.ClassicEditor
-        .create(document.getElementById("stanza1"))
+        .create(document.querySelector("#stanza1"))
     CKEDITOR.ClassicEditor
-        .create(document.getElementById("stanza2"))
+        .create(document.querySelector("#stanza2"))
     CKEDITOR.ClassicEditor
-        .create(document.getElementById("stanza3"))
+        .create(document.querySelector("#stanza3"))
     CKEDITOR.ClassicEditor
-        .create(document.getElementById("stanza4"))
+        .create(document.querySelector("#stanza4"))
     CKEDITOR.ClassicEditor
-        .create(document.getElementById("stanza5"))
+        .create(document.querySelector("#stanza5"))
     CKEDITOR.ClassicEditor
-        .create(document.getElementById("stanza6"))
+        .create(document.querySelector("#stanza6"))
     CKEDITOR.ClassicEditor
-        .create(document.getElementById("chorus"))
+        .create(document.querySelector("#chorus"))
 </script>
 @endsection
