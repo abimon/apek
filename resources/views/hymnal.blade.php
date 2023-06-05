@@ -3,7 +3,7 @@
 <div class="m-2" style='min-height:500px;'>
     <form action="/uploadhymnal" method="post" class="row" enctype="multipart/form-data" novalidate class="needs-validation">
         @csrf
-        <div class="col-md-4 p-2">
+        <div class="p-2">
             <div class="form-floating mb-2">
                 <input type="text" name="title" placeholder=' ' class="form-control" required>
                 <label for="">Swahili Title</label>
