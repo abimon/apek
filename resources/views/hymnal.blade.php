@@ -1,5 +1,5 @@
-@extends('layouts.base', ['title'=>'Hymnal'])
-@section('dashboard')
+@extends('layouts.app', ['title'=>'Hymnal'])
+@section('content')
 <div class="m-2" style='min-height:500px;'>
     <form action="/uploadhymnal" method="post" class="row" enctype="multipart/form-data" novalidate class="needs-validation">
         @csrf
