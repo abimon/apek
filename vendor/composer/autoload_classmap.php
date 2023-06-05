@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\ApiController' => $baseDir . '/app/Http/Controllers/ApiController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -29,6 +30,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Middleware\\checkAdmin' => $baseDir . '/app/Http/Middleware/checkAdmin.php',
     'App\\Http\\Middleware\\sessionCheck' => $baseDir . '/app/Http/Middleware/sessionCheck.php',
+    'App\\Models\\Hymnal' => $baseDir . '/app/Models/Hymnal.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\comment' => $baseDir . '/app/Models/comment.php',
     'App\\Models\\diary' => $baseDir . '/app/Models/diary.php',

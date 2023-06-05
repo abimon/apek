@@ -21,8 +21,10 @@ use Illuminate\Support\Facades\Session;
 Route::get('/', function () {
     return view('home');
 });
-
-
+Route::get('/hymnal', function () {
+    return view('hymnal');
+});
+Route::post('/uploadhymnal',[dataController::class, 'uploadhymnal']);
 Route::get('/logout', function () {
     Auth::logout();
     return redirect('/login');

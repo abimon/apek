@@ -513,6 +513,7 @@ class ComposerStaticInit013fab7104f7cca61d3caaf00f46af79
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\ApiController' => __DIR__ . '/../..' . '/app/Http/Controllers/ApiController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -534,6 +535,7 @@ class ComposerStaticInit013fab7104f7cca61d3caaf00f46af79
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Middleware\\checkAdmin' => __DIR__ . '/../..' . '/app/Http/Middleware/checkAdmin.php',
         'App\\Http\\Middleware\\sessionCheck' => __DIR__ . '/../..' . '/app/Http/Middleware/sessionCheck.php',
+        'App\\Models\\Hymnal' => __DIR__ . '/../..' . '/app/Models/Hymnal.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\comment' => __DIR__ . '/../..' . '/app/Models/comment.php',
         'App\\Models\\diary' => __DIR__ . '/../..' . '/app/Models/diary.php',
