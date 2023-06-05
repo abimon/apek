@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Hymnal extends Model
+class ogotera extends Model
 {
     use HasFactory;
     protected $fillable=[
+        'k_title',
         'e_title',
         'composer',
         'key',

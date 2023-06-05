@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHymnalsTable extends Migration
+class CreateOgoterasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateHymnalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('hymnals', function (Blueprint $table) {
+        Schema::create('ogoteras', function (Blueprint $table) {
             $table->id();
+            $table->string('k_title');
             $table->string('e_title');
             $table->string('composer');
             $table->string('key');
@@ -36,6 +37,6 @@ class CreateHymnalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hymnals');
+        Schema::dropIfExists('ogoteras');
     }
 }
