@@ -30,8 +30,8 @@ Route::get('/NZK', function () {
     return view('NZK');
 });
 Route::post('/createNZK',[HymnController::class, 'createNZK']);
-Route::get('/kikuyu', function () {
-    return view('kikuyu');
+Route::get('/Kikuyu', function () {
+    return view('Kikuyu');
 });
 Route::post('/createKikuyu',[HymnController::class, 'createKikuyu']);
 Route::get('/Kalenjin', function () {
@@ -42,8 +42,8 @@ Route::get('/Dholuo', function () {
     return view('Dholuo');
 });
 Route::post('/createDholuo',[HymnController::class, 'createDholuo']);
-Route::get('/kisii', function () {
-    return view('kisii');
+Route::get('/Kisii', function () {
+    return view('Kisii');
 });
 Route::post('/createkisii',[HymnController::class, 'createkisii']);
 
