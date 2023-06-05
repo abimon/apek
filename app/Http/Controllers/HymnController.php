@@ -24,6 +24,7 @@ class HymnController extends Controller
             'stanza6'=>request()->post6,
             'chorus'=>request()-> chorus,
         ]);
+        return redirect()->back();
     }
     function createNZK(){
         kikuyu::create([
@@ -39,6 +40,7 @@ class HymnController extends Controller
             'stanza6'=>request()->post6,
             'chorus'=>request()-> chorus,
         ]);
+        return redirect()->back();
     }
     function createKisii(){
         ogotera::create([
@@ -54,6 +56,7 @@ class HymnController extends Controller
             'stanza6'=>request()->post6,
             'chorus'=>request()-> chorus,
         ]);
+        return redirect()->back();
     }
     function createDholuo(){
         dholuo::create([
@@ -69,6 +72,7 @@ class HymnController extends Controller
             'stanza6'=>request()->post6,
             'chorus'=>request()-> chorus,
         ]);
+        return redirect()->back();
     }
     function createKalenjin(){
         kalenjin::create([
@@ -84,6 +88,7 @@ class HymnController extends Controller
             'stanza6'=>request()->post6,
             'chorus'=>request()-> chorus,
         ]);
+        return redirect()->back();
     }
     function createKikuyu(){
         kikuyu::create([
@@ -99,5 +104,6 @@ class HymnController extends Controller
             'stanza6'=>request()->post6,
             'chorus'=>request()-> chorus,
         ]);
+        return redirect()->back();
     }
 }
