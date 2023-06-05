@@ -63,9 +63,9 @@
 </div>
 <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 <script>
-    CKEDITOR.ClassicEditor
+    ClassicEditor
         .create(document.querySelector("#stanza1"))
-    CKEDITOR.ClassicEditor
+    ClassicEditor
         .create(document.querySelector("#stanza2"))
     CKEDITOR.ClassicEditor
         .create(document.querySelector("#stanza3"))
