@@ -45,7 +45,7 @@ Route::post('/createDholuo',[HymnController::class, 'createDholuo']);
 Route::get('/Kisii', function () {
     return view('Kisii');
 });
-Route::post('/createkisii',[HymnController::class, 'createkisii']);
+Route::post('/createKisii',[HymnController::class, 'createKisii']);
 
 
 
