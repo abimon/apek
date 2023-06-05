@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\diary;
+use App\Models\ogotera;
 use App\Models\post;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class ApiController extends Controller
 {
@@ -18,6 +15,15 @@ class ApiController extends Controller
                 'posts'=>$post
             ];
             return $post;
+        }
+        else{
+            return response()->json(404);
+        }
+    }
+    function kisii($token){
+        $posts=ogotera::all();
+        if($token=='QWJpbW9uT21iYXRpQDIwMjI='){
+            return $posts;
         }
         else{
             return response()->json(404);
