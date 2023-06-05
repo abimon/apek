@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\userController;
 use App\Http\Controllers\dataController;
+use App\Http\Controllers\HymnController;
 use App\Http\Controllers\viewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +25,31 @@ Route::get('/', function () {
 Route::get('/hymnal', function () {
     return view('hymnal');
 });
-Route::post('/uploadhymnal',[dataController::class, 'uploadhymnal']);
+Route::post('/createhymnal',[HymnController::class, 'createHymnal']);
+Route::get('/NZK', function () {
+    return view('NZK');
+});
+Route::post('/createNZK',[HymnController::class, 'createNZK']);
+Route::get('/kikuyu', function () {
+    return view('kikuyu');
+});
+Route::post('/createKikuyu',[HymnController::class, 'createKikuyu']);
+Route::get('/Kalenjin', function () {
+    return view('Kalenjin');
+});
+Route::post('/createKalenjin',[HymnController::class, 'createKalenjin']);
+Route::get('/Dholuo', function () {
+    return view('Dholuo');
+});
+Route::post('/createDholuo',[HymnController::class, 'createDholuo']);
+Route::get('/kisii', function () {
+    return view('kisii');
+});
+Route::post('/createkisii',[HymnController::class, 'createkisii']);
+
+
+
+
 Route::get('/logout', function () {
     Auth::logout();
     return redirect('/login');

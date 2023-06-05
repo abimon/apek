@@ -1,15 +1,15 @@
-@extends('layouts.app', ['title'=>'Hymnal'])
+@extends('layouts.app', ['title'=>'Kalenjin'])
 @section('content')
 <div class="m-2" style='min-height:500px;'>
-    <form action="/createhymnal" method="post" class="row d-flex justify-content-center" enctype="multipart/form-data" novalidate class="needs-validation">
+    <form action="/createKisii" method="post" class="row d-flex justify-content-center" enctype="multipart/form-data" novalidate class="needs-validation">
         @csrf
         <div class="col-8 p-2 m-6">
-            <!--<div class="form-floating mb-2">
-                <input type="text" name="title" placeholder=' ' class="form-control" required>
-                <label for="">Swahili Title</label>
-            </div>-->
             <div class="form-floating mb-2">
-                <input type="text" name="e_title" placeholder=' ' class="form-control" required>
+                <input type="text" name="j_title" placeholder=' ' class="form-control" required>
+                <label for="">Kalenjin Title</label>
+            </div>
+            <div class="form-floating mb-2">
+                <input type="text" name="e_title" placeholder=' ' class="form-control">
                 <label for="">English Title</label>
             </div>
             <div class="form-floating mb-2">
