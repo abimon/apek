@@ -1,9 +1,9 @@
 @extends('layouts.app', ['title'=>'Hymnal'])
 @section('content')
 <div class="m-2" style='min-height:500px;'>
-    <form action="/uploadhymnal" method="post" class="row" enctype="multipart/form-data" novalidate class="needs-validation">
+    <form action="/uploadhymnal" method="post" class="row d-flex justify-content-center" enctype="multipart/form-data" novalidate class="needs-validation">
         @csrf
-        <div class="p-2 m-6">
+        <div class="col-8 p-2 m-6">
             <div class="form-floating mb-2">
                 <input type="text" name="title" placeholder=' ' class="form-control" required>
                 <label for="">Swahili Title</label>
@@ -67,15 +67,15 @@
         .create(document.querySelector("#stanza1"))
     ClassicEditor
         .create(document.querySelector("#stanza2"))
-    CKEDITOR.ClassicEditor
+    ClassicEditor
         .create(document.querySelector("#stanza3"))
-    CKEDITOR.ClassicEditor
+    ClassicEditor
         .create(document.querySelector("#stanza4"))
-    CKEDITOR.ClassicEditor
+    ClassicEditor
         .create(document.querySelector("#stanza5"))
-    CKEDITOR.ClassicEditor
+    ClassicEditor
         .create(document.querySelector("#stanza6"))
-    CKEDITOR.ClassicEditor
+    ClassicEditor
         .create(document.querySelector("#chorus"))
 </script>
 @endsection
