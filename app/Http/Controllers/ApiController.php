@@ -19,7 +19,7 @@ class ApiController extends Controller
         }
     }
     function kisii($token){
-        $posts=ogotera::select('e_title as title');
+        $posts=ogotera::all();
         if($token=='QWJpbW9uT21iYXRpQDIwMjI='){
             return $posts;
         }
