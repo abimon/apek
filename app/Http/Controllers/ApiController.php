@@ -10,9 +10,9 @@ class ApiController extends Controller
     public function read($token){
         //AbimonOmbati@2022
         $post= post::where('category','Blog')->where('posted',1)->get();
-        $hymns=ogotera::all();
+        
         if($token=='QWJpbW9uT21iYXRpQDIwMjI='){
-            return ([$post,$hymns]);
+            return $post;
         }
         else{
             return response()->json(404);
