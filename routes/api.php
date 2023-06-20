@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/read/{token}',[ApiController::class, 'read']);
 Route::get('/kisii/{token}',[ApiController::class, 'kisii']);
+Route::post('/split',[ApiController::class, 'split']);

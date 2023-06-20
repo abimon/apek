@@ -16,16 +16,16 @@ class CreateKikuyusTable extends Migration
         Schema::create('kikuyus', function (Blueprint $table) {
             $table->id();
             $table->string('y_title');
-            $table->string('e_title');
-            $table->string('composer');
-            $table->string('key');
+            $table->string('e_title')->default('');
+            $table->string('composer')->default('');
+            $table->string('key')->default('');
             $table->string('stanza1');
-            $table->string('stanza2');
-            $table->string('stanza3');
-            $table->string('stanza4');
-            $table->string('stanza5');
-            $table->string('stanza6');
-            $table->string('chorus');
+            $table->string('stanza2')->default('');
+            $table->string('stanza3')->default('');
+            $table->string('stanza4')->default('');
+            $table->string('stanza5')->default('');
+            $table->string('stanza6')->default('');
+            $table->string('chorus')->default('');
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@ class ogotera extends Model
         'k_title',
         'e_title',
         'composer',
-        'key',
+        'doh',
         'stanza1',
         'stanza2',
         'stanza3',

@@ -47,7 +47,7 @@ class HymnController extends Controller
             'k_title'=>request()->k_title,
             'e_title'=>request()->e_title,
             'composer'=>request()->composer,
-            'key'=>request()->key,
+            'doh'=>request()->key,
             'stanza1'=>request()->post1,
             'stanza2'=>request()->post2,
             'stanza3'=>request()->post3,
