@@ -11,6 +11,8 @@
     <link href="{{asset('storage/static/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('storage/static/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{asset('storage/static/assets/css/style.css')}}" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2256037842124040"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
