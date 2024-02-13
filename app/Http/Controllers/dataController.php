@@ -223,9 +223,10 @@ class dataController extends Controller
         $posts= post::all();
         foreach($posts as $post){
             Post::where('id',$post->id)->update([
-                'slug'=>Str::slug(request()->title,'_')
+                'slug'=>Str::slug($post->title,'_')
             ]);
         }
         return post::select('slug')->get();
+        
     }
 }
