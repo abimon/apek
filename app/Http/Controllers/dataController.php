@@ -10,8 +10,7 @@ use App\Models\like;
 use App\Models\comment;
 use App\Models\mcomment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Session;
+use Illuminate\Support\Str;
 
 class dataController extends Controller
 {
@@ -27,6 +26,7 @@ class dataController extends Controller
             'title' => $req->title,
             'except' => $req->excerpt,
             'body' => $req->post,
+            'slug'=>Str::slug(request()->title,'_'),
             'category' => $req->category,
             'posted' => $pub,
         ]);
@@ -218,5 +218,14 @@ class dataController extends Controller
         like::where(['user_id'=>$id])->delete();
         mcomment::where(['user_id'=>$id])->delete();
         return redirect()->back();
+    }
+    function updateSlug(){
+        $posts= post::all();
+        foreach($posts as $post){
+            Post::where('id',$post->id)->update([
+                'slug'=>Str::slug(request()->title,'_')
+            ]);
+        }
+        return 'success';
     }
 }

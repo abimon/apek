@@ -22,33 +22,6 @@ use Illuminate\Support\Facades\Session;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/hymnal', function () {
-    return view('hymnal');
-});
-Route::post('/createhymnal',[HymnController::class, 'createHymnal']);
-Route::get('/NZK', function () {
-    return view('NZK');
-});
-Route::post('/createNZK',[HymnController::class, 'createNZK']);
-Route::get('/Kikuyu', function () {
-    return view('Kikuyu');
-});
-Route::post('/createKikuyu',[HymnController::class, 'createKikuyu']);
-Route::get('/Kalenjin', function () {
-    return view('Kalenjin');
-});
-Route::post('/createKalenjin',[HymnController::class, 'createKalenjin']);
-Route::get('/Dholuo', function () {
-    return view('Dholuo');
-});
-Route::post('/createDholuo',[HymnController::class, 'createDholuo']);
-Route::get('/Kisii', function () {
-    return view('Kisii');
-});
-Route::post('/createKisii',[HymnController::class, 'createKisii']);
-
-
-
 
 Route::get('/logout', function () {
     Auth::logout();
@@ -83,5 +56,6 @@ Route::middleware('sessionCheck')->group(function () {
     Route::post('/sendsms', [dataController::class, 'sendsms']);
     Route::get('/make/{role}/{id}', [dataController::class, 'role']);
     Route::get('/deleteUser/{id}', [dataController::class, 'deleteUser']);
+    Route::get('/updateSlug', [dataController::class, 'updateSlug'])->middleware('checkAdmin');
 });
 Auth::routes();

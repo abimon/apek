@@ -102,7 +102,7 @@
                                 @foreach($posts as $id=>$post)
                                 <tr>
                                     <th class=" bdwT-0">{{$id+1}}</th>
-                                    <td class="fw-600">{{$post->title}}</td>
+                                    <td class="fw-600"><a href="/post/edit/{{$post->id}}">{{$post->title}}</a></td>
                                     @foreach($users->where('id', $post->user_id) as $user)
                                     <td>{{$user->name}}
                                         @endforeach

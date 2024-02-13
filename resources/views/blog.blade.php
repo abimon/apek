@@ -3,7 +3,7 @@
     <div class="row" id='blog'>
         <div>
             <?php $image=asset('storage/static/img/cover.PNG');?>
-            <div style="background:url({{$image}}); background-size:cover; min-height:100px;">
+            <div style="background:url('{{$image}}'); background-size:cover; min-height:100px;">
                 <div class="d-block text-center ">
                     <h2 class="text-light ">Speaking Hearts</h2>
                 </div>
@@ -14,7 +14,7 @@
                 @foreach($posts as $post)
                 <div class="row">
                     <div class="col-md-12 mt-1 p-4">
-                        <a href="/speakinghearts/{{$post->title}}">
+                        <a href="/speakinghearts/{{$post->slug}}">
                             <div class="text-uppercase" style="font-size:105%">
                                 <strong>{{$post->title}}</strong>
                             </div>

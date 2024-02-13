@@ -1,9 +1,9 @@
-@extends('layouts.app',['title'=>$article->title])
+@extends('layouts.app',['title'=>$article->title,'desc'=>$article->except])
 @section('content')
 <div class="row">
     <div>
         <?php $image = asset('storage/static/img/cover.PNG'); ?>
-        <div style="background:url({{$image}}); background-size:cover; min-height:100px;">
+        <div style="background:url('{{$image}}'); background-size:cover; min-height:100px;">
             <div class="d-block text-center ">
                 <h2 class="text-light ">Speaking Hearts</h2>
             </div>
@@ -55,7 +55,7 @@
         <h3 class='text-info text-center'>Other Posts</h3>
         <hr>
         @foreach($posts->where('id','!=', $article->id) as $post)
-        <a href="/speakinghearts/{{$post->title}}">
+        <a href="/speakinghearts/{{$post->slug}}">
             <p>
                 <i style="text-decoration:none; text-transform:uppercase;" class="text-secondary">{{$post->title}}</i>
             </p>

@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEK INC. | {{$title}}</title>
+    @isset("desc")
+    <meta name="description" content={{$desc}}>
+    @else
+    <meta name="description" content="APEK INC. Is a personal website that aims at sharing life experiences through nusic, poetry and articles. This site shares true life stories of the author or someone who has permissively allowed the author to share their stories. We hope it will encourage you.">
+    @endif
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Vendor CSS Files -->
     <link href="{{asset('storage/static/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
