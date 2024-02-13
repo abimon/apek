@@ -46,7 +46,7 @@
                     @csrf
                     <div class="input-group">
                         <input type='text' class="form-control" name="comment">
-                        <label><button class="btn btn-outline-success" type="submit"><i class="fa fa-comment"></i></button></label>
+                        <label><button class="btn btn-outline-success" type="submit">Post</button></label>
                     </div>
                 </form>
             </div>
