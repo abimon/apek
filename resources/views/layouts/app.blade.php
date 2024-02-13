@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEK INC. | {{$title}}</title>
-    @isset("desc")
+    @isset($desc)
     <meta name="description" content={{$desc}}>
     @else
     <meta name="description" content="APEK INC. Is a personal website that aims at sharing life experiences through nusic, poetry and articles. This site shares true life stories of the author or someone who has permissively allowed the author to share their stories. We hope it will encourage you.">
