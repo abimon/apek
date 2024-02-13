@@ -55,7 +55,7 @@
     <div class="col-sm-3 p-3">
         <h3 class='text-info text-center'>Other Posts</h3>
         <hr>
-        @foreach($posts->where('id','!=', $article->id) as $post)
+        @foreach($posts->where('id','!=', $article->id)->where('category',$article->category) as $post)
         <a href="/speakinghearts/{{$post->slug}}">
             <p>
                 <i style="text-decoration:none; text-transform:uppercase;" class="text-secondary">{{$post->title}}</i>
