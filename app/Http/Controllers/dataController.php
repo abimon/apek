@@ -226,6 +226,6 @@ class dataController extends Controller
                 'slug'=>Str::slug(request()->title,'_')
             ]);
         }
-        return 'success';
+        return post::select('slug')->get();
     }
 }

@@ -15,5 +15,6 @@ class post extends Model
         'posted',
         'except',
         'body',
+        'slug'
     ];
 }
