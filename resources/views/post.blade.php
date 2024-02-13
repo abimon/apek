@@ -12,7 +12,7 @@
     <div class="col-sm-9 mt-2">
         <div class="bg-transparent shadow p-2" style="min-height:550px ;">
 
-            <h3 class="text-center text-uppercase text-bold">{{$article->title}}</h3>
+            <h3 class="text-center text-uppercase text-bold"><b>{{$article->title}}</b></h3>
             <div class='p-2 lh-sm'>
                 <?php echo html_entity_decode($article['body']); ?>
             </div>
