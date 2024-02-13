@@ -28,6 +28,7 @@
                 </a>
             </div>
             <div>
+                <h2>({{$comments->count()}}) Comments</h2>
                 @foreach($comments as $comment)
                 <div class="text-dark me-5">
                     @foreach($users as $user)
@@ -39,6 +40,7 @@
                 </div>
                 @endforeach
             </div>
+            <h2>Leave a Comment</h2>
             <div class="mt-1">
                 <form action="/comment/{{$article->id}}" method="post">
                     @csrf
@@ -46,7 +48,6 @@
                         <input type='text' class="form-control" name="comment">
                         <label><button class="btn btn-outline-success" type="submit"><i class="fa fa-comment"></i></button></label>
                     </div>
-
                 </form>
             </div>
         </div>
