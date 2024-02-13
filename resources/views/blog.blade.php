@@ -3,7 +3,7 @@
     <div class="row" id='blog'>
         <div>
             <?php $image=asset('storage/static/img/cover.PNG');?>
-            <div style="background:url('{{$image}}'); background-size:cover; min-height:100px;">
+            <div style="background:url({{$image}}); background-size:cover; min-height:100px;">
                 <div class="d-block text-center ">
                     <h2 class="text-light ">Speaking Hearts</h2>
                 </div>
