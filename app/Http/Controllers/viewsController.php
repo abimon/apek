@@ -85,7 +85,7 @@ class viewsController extends Controller
     function post($title)
     {
         $post = post::where(['slug' => $title])->first();
-        $posts = post::where('posted', 1)->select('title')->orderBy('id', 'desc')->get();
+        $posts = post::where('posted', 1)->select('title','category')->orderBy('id', 'desc')->get();
         $comments = comment::where(['post_id'=>$post->id])->get();
         $users = User::all();
         $likes = like::where(['post_id'=>$post->id])->get();
